@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="61c-hs-72z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photorama-->
+        <scene sceneID="3Je-uy-Oqj">
+            <objects>
+                <viewController id="jZc-b5-0aB" customClass="PhotosViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fzE-HK-Fhg"/>
+                        <viewControllerLayoutGuide type="bottom" id="v8j-Xy-3bm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I9r-JY-5BN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kln-bF-xSE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kln-bF-xSE" firstAttribute="top" secondItem="fzE-HK-Fhg" secondAttribute="bottom" id="Aoa-ql-ZiT"/>
+                            <constraint firstItem="Kln-bF-xSE" firstAttribute="leading" secondItem="I9r-JY-5BN" secondAttribute="leading" id="lA5-G0-X25"/>
+                            <constraint firstAttribute="trailing" secondItem="Kln-bF-xSE" secondAttribute="trailing" id="qdO-nQ-0JT"/>
+                            <constraint firstItem="v8j-Xy-3bm" firstAttribute="top" secondItem="Kln-bF-xSE" secondAttribute="bottom" id="tc4-op-Y4f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photorama" id="NuU-Xv-mRF"/>
+                    <connections>
+                        <outlet property="imageView" destination="Kln-bF-xSE" id="dUk-gC-B0W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2z3-W4-tRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367.19999999999999" y="98.50074962518741"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CMp-eR-0CF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="61c-hs-72z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lv3-2E-Yqw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jZc-b5-0aB" kind="relationship" relationship="rootViewController" id="6n5-81-jSQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUv-jD-RbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-572" y="98.50074962518741"/>
+        </scene>
+    </scenes>
+</document>
