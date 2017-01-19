@@ -28,7 +28,7 @@ private let dateFormatter: DateFormatter = {
 }()
 
 private func photoFromJSONObject(json: [String:Any]) -> Photo? {
-    guard let photoID = json["id"] as? String, let title = json["titl"] as? String, let dateString = json["datetaken"] as? String, let photoURLString = json["url_h"] as? String, let url = URL(string: photoURLString), let dateTaken = dateFormatter.date(from: dateString) else {
+    guard let photoID = json["id"] as? String, let title = json["title"] as? String, let dateString = json["datetaken"] as? String, let photoURLString = json["url_h"] as? String, let url = URL(string: photoURLString), let dateTaken = dateFormatter.date(from: dateString) else {
         return nil
     }
     return Photo(title: title, photoID: photoID, remoteURL: url, dateTaken: dateTaken)
